@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* フォントをArialに統一 */
     color: #333;
     background-color: #f4f4f4;
     margin: 0;
@@ -26,6 +26,7 @@ header {
 
 header h1 {
     margin: 0;
+    font-family: Arial, sans-serif; /* フォントをArialに統一 */
 }
 
 nav {
@@ -37,6 +38,7 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
+    font-family: Arial, sans-serif; /* フォントをArialに統一 */
 }
 
 nav a:hover {
@@ -45,6 +47,7 @@ nav a:hover {
 
 main {
     padding: 20px;
+    font-family: Arial, sans-serif; /* フォントをArialに統一 */
 }
 
 ol {
@@ -60,6 +63,7 @@ ol li {
 ol a {
     color: #007bff;
     text-decoration: none;
+    font-family: Arial, sans-serif; /* フォントをArialに統一 */
 }
 
 ol a:hover {
@@ -83,6 +87,7 @@ th, td {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
+    font-family: Arial, sans-serif; /* フォントをArialに統一 */
 }
 
 th {
@@ -113,71 +118,99 @@ iframe {
     display: block;
     margin: 20px auto;
     border: none;
-}   
+}
 
-.ranking{
-margin: 0;
-padding: 0;
-list-style-type: none;
+.ranking {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: Arial, sans-serif; /* フォントをArialに統一 */
 }
-.ranking li{
-position: relative;
-margin: 0;
-padding: 0 0 0 16px;
-border-bottom: 1px dotted #ccc;
+
+.ranking li {
+    position: relative;
+    margin: 0;
+    padding: 0 0 0 16px;
+    border-bottom: 1px dotted #ccc;
 }
-.ranking li::before{
-position: absolute;
-top: 7px;
-left: 1px;
-color: #d05;
-content: "★";
-font-size: 9px;
+
+.ranking li::before {
+    position: absolute;
+    top: 7px;
+    left: 1px;
+    color: #d05;
+    content: "★";
+    font-size: 9px;
 }
+
 .ranking li:first-child::before,
 .ranking li:nth-child(2)::before,
-.ranking li:nth-child(3)::before{
-position: absolute;
-top: 1px;
-left: 0;
-width: 0;
-height: 0;
-border: 6px solid transparent;
-border-bottom: 10px solid #fb0;
-content: "";
+.ranking li:nth-child(3)::before {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom: 10px solid #fb0;
+    content: "";
 }
+
 .ranking li:first-child::after,
 .ranking li:nth-child(2)::after,
-.ranking li:nth-child(3)::after{
-position: absolute;
-top: 9px;
-left: 0;
-width: 0;
-height: 0;
-border: 6px solid #fb0;
-border-top: 3px solid transparent;
-border-bottom: 6px solid #f90;
-content: "";
+.ranking li:nth-child(3)::after {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 6px solid #fb0;
+    border-top: 3px solid transparent;
+    border-bottom: 6px solid #f90;
+    content: "";
 }
-.ranking li:nth-child(2)::before{
-border-bottom: 10px solid #ccc;
+
+.ranking li:nth-child(2)::before {
+    border-bottom: 10px solid #ccc;
 }
-.ranking li:nth-child(2)::after{
-border: 6px solid #ccc;
-border-top: 3px solid transparent;
-border-bottom: 6px solid #aaa;
+
+.ranking li:nth-child(2)::after {
+    border: 6px solid #ccc;
+    border-top: 3px solid transparent;
+    border-bottom: 6px solid #aaa;
 }
-.ranking li:nth-child(3)::before{
-border-bottom: 10px solid #d98;
+
+.ranking li:nth-child(3)::before {
+    border-bottom: 10px solid #d98;
 }
-.ranking li:nth-child(3)::after{
-border: 6px solid #d98;
-border-top: 3px solid transparent;
-border-bottom: 6px solid #c76;
+
+.ranking li:nth-child(3)::after {
+    border: 6px solid #d98;
+    border-top: 3px solid transparent;
+    border-bottom: 6px solid #c76;
 }
-.ranking li span{
-color: #9ab;
-font-size: 11px;
+
+.ranking li span {
+    color: #9ab;
+    font-size: 11px;
+}
+
+.photo-wrapper {
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+}
+
+.photo-number {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
 }
     </style>
 </head>
@@ -219,37 +252,90 @@ font-size: 11px;
             <h4>○BOYS PLANET ファイナリスト18人と最終順位</h4>
             <div class="photo-container">
                 <div class="photo-row">
-                    <img src="https://event.mnetplus.world/image/boysplanet/artist/11874afa-706c-42ab-b361-b8777d9dd722?w=480&h=480" alt="メンバー1" class="member-photo">
+                    <div class="photo-wrapper">
+                        <img src="https://event.mnetplus.world/image/boysplanet/artist/11874afa-706c-42ab-b361-b8777d9dd722?w=480&h=480" alt="メンバー1" class="member-photo">
+                        <div class="photo-number">1</div>
+                    </div>
                 </div>
                 <div class="photo-row">
-                    <img src="https://event.mnetplus.world/image/boysplanet/artist/c66291f8-43f9-469e-9612-dd18a4db4457" alt="メンバー2" class="member-photo">
-                    <img src="https://event.mnetplus.world/image/boysplanet/artist/b2b404a9-5111-4f62-b345-9a489c0173fb" alt="メンバー3" class="member-photo">
+                    <div class="photo-wrapper">
+                        <img src="https://event.mnetplus.world/image/boysplanet/artist/c66291f8-43f9-469e-9612-dd18a4db4457" alt="メンバー2" class="member-photo">
+                        <div class="photo-number">2</div>
+                    </div>
+                    <div class="photo-wrapper">
+                        <img src="https://event.mnetplus.world/image/boysplanet/artist/b2b404a9-5111-4f62-b345-9a489c0173fb" alt="メンバー3" class="member-photo">
+                        <div class="photo-number">3</div>
+                    </div>
                 </div>
                 <div class="photo-row">
-                    <img src="https://event.mnetplus.world/image/boysplanet/artist/646f2767-e925-4f54-afac-55fe00e031a1" alt="メンバー4" class="member-photo">
-                    <img src="https://event.mnetplus.world/image/boysplanet/artist/0cc457ff-431e-4958-adc8-da13cf0120e4" alt="メンバー5" class="member-photo">
-                    <img src="https://event.mnetplus.world/image/boysplanet/artist/284ea8b0-addb-498c-b949-f0e7dd7d9b9c" alt="メンバー6" class="member-photo">
+                    <div class="photo-wrapper">
+                        <img src="https://event.mnetplus.world/image/boysplanet/artist/646f2767-e925-4f54-afac-55fe00e031a1?w=480&h=480" alt="メンバー4" class="member-photo">
+                        <div class="photo-number">4</div>
+                    </div>
+                    <div class="photo-wrapper">
+                        <img src="https://event.mnetplus.world/image/boysplanet/artist/0cc457ff-431e-4958-adc8-da13cf0120e4" alt="メンバー5" class="member-photo">
+                        <div class="photo-number">5</div>
+                    </div>
+                    <div class="photo-wrapper">
+                        <img src="https://event.mnetplus.world/image/boysplanet/artist/284ea8b0-addb-498c-b949-f0e7dd7d9b9c" alt="メンバー6" class="member-photo">
+                        <div class="photo-number">6</div>
+                    </div>
                 </div>
                 <div class="photo-row">
-                    <img src="https://event.mnetplus.world/image/boysplanet/artist/812e98e2-3f94-4c23-a91c-84a87ff4d580" alt="メンバー7" class="member-photo">
-                    <img src="https://event.mnetplus.world/image/boysplanet/artist/79fdbdf9-b2c3-43ed-9477-b221956e360f" alt="メンバー8" class="member-photo">
-                    <img src="https://event.mnetplus.world/image/boysplanet/artist/598ec74f-4d4b-4eba-8f11-9263cb435831" alt="メンバー9" class="member-photo">
-                    <img src="https://event.mnetplus.world/image/boysplanet/artist/fd51118b-7e97-4b4c-a438-c58e40b5148a" alt="メンバー10" class="member-photo">
+                    <div class="photo-wrapper">
+                        <img src="https://event.mnetplus.world/image/boysplanet/artist/812e98e2-3f94-4c23-a91c-84a87ff4d580" alt="メンバー7" class="member-photo">
+                        <div class="photo-number">7</div>
+                    </div>
+                    <div class="photo-wrapper">
+                        <img src="https://event.mnetplus.world/image/boysplanet/artist/79fdbdf9-b2c3-43ed-9477-b221956e360f" alt="メンバー8" class="member-photo">
+                        <div class="photo-number">8</div>
+                    </div>
+                    <div class="photo-wrapper">
+                        <img src="https://event.mnetplus.world/image/boysplanet/artist/598ec74f-4d4b-4eba-8f11-9263cb435831" alt="メンバー9" class="member-photo">
+                        <div class="photo-number">9</div>
+                    </div>
+                    <div class="photo-wrapper">
+                        <img src="https://event.mnetplus.world/image/boysplanet/artist/fd51118b-7e97-4b4c-a438-c58e40b5148a" alt="メンバー10" class="member-photo">
+                        <div class="photo-number">10</div>
+                    </div>
                 </div>
                 <div class="photo-row">
-                    <img src="https://event.mnetplus.world/image/boysplanet/artist/cba16fdd-5509-4aa0-963b-2a9a79f0fdff" alt="メンバー11" class="member-photo">
-                    <img src="https://event.mnetplus.world/image/boysplanet/artist/3cc341f7-af57-45a4-9b81-2289f005dbc2" alt="メンバー12" class="member-photo">
-                    <img src="https://event.mnetplus.world/image/boysplanet/artist/ea68fe40-4cdd-41fc-8ced-994d44aa94f8" alt="メンバー13" class="member-photo">
-                    <img src="https://event.mnetplus.world/image/boysplanet/artist/ab0441da-0920-4c38-88a5-6546d09a657d" alt="メンバー14" class="member-photo">
-                    <img src="https://event.mnetplus.world/image/boysplanet/artist/8091a058-c4cb-4186-8570-c425f1a8388e" alt="メンバー15" class="member-photo">
+                    <div class="photo-wrapper">
+                        <img src="https://event.mnetplus.world/image/boysplanet/artist/cba16fdd-5509-4aa0-963b-2a9a79f0fdff" alt="メンバー11" class="member-photo">
+                        <div class="photo-number">11</div>
+                    </div>
+                    <div class="photo-wrapper">
+                        <img src="https://event.mnetplus.world/image/boysplanet/artist/3cc341f7-af57-45a4-9b81-2289f005dbc2" alt="メンバー12" class="member-photo">
+                        <div class="photo-number">12</div>
+                    </div>
+                    <div class="photo-wrapper">
+                        <img src="https://event.mnetplus.world/image/boysplanet/artist/ea68fe40-4cdd-41fc-8ced-994d44aa94f8" alt="メンバー13" class="member-photo">
+                        <div class="photo-number">13</div>
+                    </div>
+                    <div class="photo-wrapper">
+                        <img src="https://event.mnetplus.world/image/boysplanet/artist/ab0441da-0920-4c38-88a5-6546d09a657d" alt="メンバー14" class="member-photo">
+                        <div class="photo-number">14</div>
+                    </div>
+                    <div class="photo-wrapper">
+                        <img src="https://event.mnetplus.world/image/boysplanet/artist/8091a058-c4cb-4186-8570-c425f1a8388e" alt="メンバー15" class="member-photo">
+                        <div class="photo-number">15</div>
+                    </div>
                 </div>
                 <div class="photo-row">
-                    <img src="https://event.mnetplus.world/image/boysplanet/artist/d0e83f48-734c-4f6e-b365-0c0cd3dd407d" alt="メンバー16" class="member-photo">
-                    <img src="https://event.mnetplus.world/image/boysplanet/artist/a67d7940-eaa1-4584-8a7c-9e93d74da00f" alt="メンバー17" class="member-photo">
-                    <img src="https://event.mnetplus.world/image/boysplanet/artist/0f222e33-dd7a-4e1a-951f-ca6ecce15c8e?w=480&h=480" alt="メンバー18" class="member-photo">
+                    <div class="photo-wrapper">
+                        <img src="https://event.mnetplus.world/image/boysplanet/artist/d0e83f48-734c-4f6e-b365-0c0cd3dd407d" alt="メンバー16" class="member-photo">
+                        <div class="photo-number">16</div>
+                    </div>
+                    <div class="photo-wrapper">
+                        <img src="https://event.mnetplus.world/image/boysplanet/artist/a67d7940-eaa1-4584-8a7c-9e93d74da00f" alt="メンバー17" class="member-photo">
+                        <div class="photo-number">17</div>
+                    </div>
+                    <div class="photo-wrapper">
+                        <img src="https://event.mnetplus.world/image/boysplanet/artist/0f222e33-dd7a-4e1a-951f-ca6ecce15c8e?w=480&h=480" alt="メンバー18" class="member-photo">
+                        <div class="photo-number">18</div>
+                    </div>
                 </div>
             </div>
-
             <ul class="ranking">
                 <li>ジャン・ハオ<span>5位ー2位ー2位ー1位</span></li>
                 <li>ソン・ハンビン<span>1位ー1位ー1位ー2位</span></li>
@@ -270,7 +356,6 @@ font-size: 11px;
                 <li>ナ・カムデン<span>30位ー20位ー18位ー17位</span></li>
                 <li>ユン・ジョンウ<span>38位ー15位ー15位ー18位</span></li>
              </ul>
-
 
 
             <h4>○デビューメンバーの順位変動</h4>
@@ -353,16 +438,18 @@ font-size: 11px;
                     }
                 });
             </script>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/rodVFgb6j-s?si=DHBU6Ols30eNSbGx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-            <h4 id="anker3">まとめ</h4>
+            <h5 id="anker3">まとめ</h5>
             <p>様々なミッションを経てK-POPボーイズグループとしてグローバルデビューを果たした9人。
-                先日デビュー1周年を迎えた。これからもZEROBASEONEの活躍に期待～</p>
+                先日デビュー1周年を迎えたZEROBASEONE。これからも活躍に期待～</p>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/yCv8OfqZ_AQ?si=NYzyFAbUuxJSh0oN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
    
+
+            <a href=”最終課題\a.html” target=”_blank”>ZEROBASEONEプロフィール</a>
+            <a href=”最終課題\b.html” target=”_blank”>ZEROBASEONEミニアルバム</a>
+
         </section>
     </main>
 </body>
-
 </html>

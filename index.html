@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Momoka">
+    <meta name="keywords" content="html,css,javascript">
+    <title>コンピュータ・リテラシーⅡ 最終課題</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ol li {
+    margin: 10px 0;
+}
+
+ol a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+ol a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+.member-photo {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo-row {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+iframe {
+    display: block;
+    margin: 20px auto;
+    border: none;
+}   
+
+.ranking{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+.ranking li{
+position: relative;
+margin: 0;
+padding: 0 0 0 16px;
+border-bottom: 1px dotted #ccc;
+}
+.ranking li::before{
+position: absolute;
+top: 7px;
+left: 1px;
+color: #d05;
+content: "★";
+font-size: 9px;
+}
+.ranking li:first-child::before,
+.ranking li:nth-child(2)::before,
+.ranking li:nth-child(3)::before{
+position: absolute;
+top: 1px;
+left: 0;
+width: 0;
+height: 0;
+border: 6px solid transparent;
+border-bottom: 10px solid #fb0;
+content: "";
+}
+.ranking li:first-child::after,
+.ranking li:nth-child(2)::after,
+.ranking li:nth-child(3)::after{
+position: absolute;
+top: 9px;
+left: 0;
+width: 0;
+height: 0;
+border: 6px solid #fb0;
+border-top: 3px solid transparent;
+border-bottom: 6px solid #f90;
+content: "";
+}
+.ranking li:nth-child(2)::before{
+border-bottom: 10px solid #ccc;
+}
+.ranking li:nth-child(2)::after{
+border: 6px solid #ccc;
+border-top: 3px solid transparent;
+border-bottom: 6px solid #aaa;
+}
+.ranking li:nth-child(3)::before{
+border-bottom: 10px solid #d98;
+}
+.ranking li:nth-child(3)::after{
+border: 6px solid #d98;
+border-top: 3px solid transparent;
+border-bottom: 6px solid #c76;
+}
+.ranking li span{
+color: #9ab;
+font-size: 11px;
+}
+    </style>
+</head>
+
+<body>
+    <header id="top">
+        <h1>ZEROBASEONE</h1>
+        <nav>
+            <a href="#">ホーム</a>
+            <a href="#">タグリファレンス</a>
+            <a href="#">問い合わせ</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>目次</h2>
+            <ol>
+                <li><a href="#anker1">ZEROBASEONEってどんなグループ？</a></li>
+                <li><a href="#anker2">ZB1がデビューするまで</a></li>
+                <li><a href="#anker3">まとめ</a></li>
+            </ol>
+
+            <h3 id="anker1">ZEROBASEONEって？</h3>
+            <div>
+                <img src="https://i.pinimg.com/originals/c1/e9/77/c1e9770c22234588eebc40b254476579.jpg" width="700" height="500" alt="ZB1">
+            </div>
+            <dl>
+                <dt>『ZEROBASEONE』</dt>
+                <dd>グローバルボーイズグループデビュープロジェクト『BOYS PLANET』から誕生した第5世代K-POPボーイズグループ。
+                    SUNG HAN BIN、KIM JI WOONG、ZHANG HAO、SEOK MATTHEW、KIM TAE RAE、RICKY、KIM GYU VIN、PARK GUN WOOK、HAN YU JINのグローバルな9名で構成されており、グループ名はゼロ(0)から始まりワン(1)で誕生する9人のメンバーの「輝かしい始まり」という意味を持つ。
+                </dd>
+                (引用:ZEROBASEONE Japan Official site)
+            </dl>
+
+            <h3 id="anker2">ZB1がデビューするまで</h3>
+            <p>各国から集まった98人の参加者から、視聴者投票で生存者が決まりファイナルステージでは18人に絞られた。18人がデビューを目指してパフォーマンスを繰り広げた。</p>
+
+            <h4>○BOYS PLANET ファイナリスト18人と最終順位</h4>
+            <div class="photo-container">
+                <div class="photo-row">
+                    <img src="https://event.mnetplus.world/image/boysplanet/artist/11874afa-706c-42ab-b361-b8777d9dd722?w=480&h=480" alt="メンバー1" class="member-photo">
+                </div>
+                <div class="photo-row">
+                    <img src="https://event.mnetplus.world/image/boysplanet/artist/c66291f8-43f9-469e-9612-dd18a4db4457" alt="メンバー2" class="member-photo">
+                    <img src="https://event.mnetplus.world/image/boysplanet/artist/b2b404a9-5111-4f62-b345-9a489c0173fb" alt="メンバー3" class="member-photo">
+                </div>
+                <div class="photo-row">
+                    <img src="https://event.mnetplus.world/image/boysplanet/artist/646f2767-e925-4f54-afac-55fe00e031a1" alt="メンバー4" class="member-photo">
+                    <img src="https://event.mnetplus.world/image/boysplanet/artist/0cc457ff-431e-4958-adc8-da13cf0120e4" alt="メンバー5" class="member-photo">
+                    <img src="https://event.mnetplus.world/image/boysplanet/artist/284ea8b0-addb-498c-b949-f0e7dd7d9b9c" alt="メンバー6" class="member-photo">
+                </div>
+                <div class="photo-row">
+                    <img src="https://event.mnetplus.world/image/boysplanet/artist/812e98e2-3f94-4c23-a91c-84a87ff4d580" alt="メンバー7" class="member-photo">
+                    <img src="https://event.mnetplus.world/image/boysplanet/artist/79fdbdf9-b2c3-43ed-9477-b221956e360f" alt="メンバー8" class="member-photo">
+                    <img src="https://event.mnetplus.world/image/boysplanet/artist/598ec74f-4d4b-4eba-8f11-9263cb435831" alt="メンバー9" class="member-photo">
+                    <img src="https://event.mnetplus.world/image/boysplanet/artist/fd51118b-7e97-4b4c-a438-c58e40b5148a" alt="メンバー10" class="member-photo">
+                </div>
+                <div class="photo-row">
+                    <img src="https://event.mnetplus.world/image/boysplanet/artist/cba16fdd-5509-4aa0-963b-2a9a79f0fdff" alt="メンバー11" class="member-photo">
+                    <img src="https://event.mnetplus.world/image/boysplanet/artist/3cc341f7-af57-45a4-9b81-2289f005dbc2" alt="メンバー12" class="member-photo">
+                    <img src="https://event.mnetplus.world/image/boysplanet/artist/ea68fe40-4cdd-41fc-8ced-994d44aa94f8" alt="メンバー13" class="member-photo">
+                    <img src="https://event.mnetplus.world/image/boysplanet/artist/ab0441da-0920-4c38-88a5-6546d09a657d" alt="メンバー14" class="member-photo">
+                    <img src="https://event.mnetplus.world/image/boysplanet/artist/8091a058-c4cb-4186-8570-c425f1a8388e" alt="メンバー15" class="member-photo">
+                </div>
+                <div class="photo-row">
+                    <img src="https://event.mnetplus.world/image/boysplanet/artist/d0e83f48-734c-4f6e-b365-0c0cd3dd407d" alt="メンバー16" class="member-photo">
+                    <img src="https://event.mnetplus.world/image/boysplanet/artist/a67d7940-eaa1-4584-8a7c-9e93d74da00f" alt="メンバー17" class="member-photo">
+                    <img src="https://event.mnetplus.world/image/boysplanet/artist/0f222e33-dd7a-4e1a-951f-ca6ecce15c8e?w=480&h=480" alt="メンバー18" class="member-photo">
+                </div>
+            </div>
+
+            <ul class="ranking">
+                <li>ジャン・ハオ<span>5位ー2位ー2位ー1位</span></li>
+                <li>ソン・ハンビン<span>1位ー1位ー1位ー2位</span></li>
+                <li>ソク・マシュー<span>2位ー4位ー9位ー3位</span></li>
+                <li>リッキー<span>12位ー14位ー8位ー4位</span></li>
+                <li>パク・ゴヌク<span>10位ー9位ー12位ー5位</span></li>
+                <li>キム・テレ<span>11位ー7位ー4位ー6位</span></li>
+                <li>キム・ギュビン<span>6位ー6位ー7位ー7位</span></li>
+                <li>キム・ジウン<span>3位ー5位ー3位ー8位</span></li>
+                <li>ハン・ユジン<span>4位ー3位ー5位ー9位</span></li>
+                <li>ジェイ<span>9位ー12位ー13位ー10位</span></li>
+                <li>パク・ハンビン<span>22位ー13位ー11位ー11位</span></li>
+                <li>佳汰<span>8位ー8位ー6位ー12位</span></li>
+                <li>イ・フェテク<span>7位ー11位ー10位ー13位</span></li>
+                <li>クム・ジュンヒョン<span>14位ー10位ー16位ー14位</span></li>
+                <li>イ・ジョンヒョン<span>39位ー24位ー17位ー15位</span></li>
+                <li>ユ・スンオン<span>17位ー17位ー14位ー16位</span></li>
+                <li>ナ・カムデン<span>30位ー20位ー18位ー17位</span></li>
+                <li>ユン・ジョンウ<span>38位ー15位ー15位ー18位</span></li>
+             </ul>
+
+
+
+            <h4>○デビューメンバーの順位変動</h4>
+            <canvas id="rankingChart" width="800" height="400"></canvas>
+            <script>
+                const ctx = document.getElementById('rankingChart').getContext('2d');
+                const rankingChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['第1回生存者発表式', '第2回生存者発表式', '第3回生存者発表式', 'Final'],
+                        datasets: [
+                            {
+                                label: 'ジャンハオ',
+                                data: [5, 2, 2, 1],
+                                borderColor: 'red',
+                                fill: false
+                            },
+                            {
+                                label: 'ソンハンビン',
+                                data: [1, 1, 1, 2],
+                                borderColor: 'blue',
+                                fill: false
+                            },
+                            {
+                                label: 'ソクマシュー',
+                                data: [2, 4, 9, 3],
+                                borderColor: 'green',
+                                fill: false
+                            },
+                            {
+                                label: 'リッキー',
+                                data: [12, 14, 8, 4],
+                                borderColor: 'purple',
+                                fill: false
+                            },
+                            {
+                                label: 'パクゴヌク',
+                                data: [3, 5, 12, 5],
+                                borderColor: 'orange',
+                                fill: false
+                            },
+                            {
+                                label: 'キムテレ',
+                                data: [11, 7, 4, 6],
+                                borderColor: 'yellow',
+                                fill: false
+                            },
+                            {
+                                label: 'キムギュビン',
+                                data: [6, 6, 7, 7],
+                                borderColor: 'brown',
+                                fill: false
+                            },
+                            {
+                                label: 'キムジウン',
+                                data: [3, 5, 3, 8],
+                                borderColor: 'pink',
+                                fill: false
+                            },
+                            {
+                                label: 'ハンユジン',
+                                data: [4, 3, 5, 9],
+                                borderColor: 'gray',
+                                fill: false
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                reverse: true,
+                                ticks: {
+                                    stepSize: 1,
+                                    beginAtZero: true,
+                                    max: 15
+                                }
+                            }
+                        }
+                    }
+                });
+            </script>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rodVFgb6j-s?si=DHBU6Ols30eNSbGx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <h4 id="anker3">まとめ</h4>
+            <p>様々なミッションを経てK-POPボーイズグループとしてグローバルデビューを果たした9人。
+                先日デビュー1周年を迎えた。これからもZEROBASEONEの活躍に期待～</p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yCv8OfqZ_AQ?si=NYzyFAbUuxJSh0oN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   
+        </section>
+    </main>
+</body>
+
+</html>

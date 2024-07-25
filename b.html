@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Momoka">
+    <meta name="keywords" content="html, css, javascript">
+    <link rel="stylesheet" href="styles.css">
+    <title>コンピュータ・リテラシーⅡ 最終課題</title>
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+header, main {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+button {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+</style>
+
+<body>
+    <header id="top">
+        <h1>ZEROBASEONE</h1>
+        <nav>
+            ホーム
+            タグリファレンス
+            問い合わせ
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>ZEROBASEONE ミニアルバム</h1>
+            <p>デビューしてから3つのミニアルバムをリリースしており、サークルチャートでは1stアルバムと3rdアルバムでは1位、2ndアルバムでは2位を獲得。
+                1stアルバムの売上は K-POPグループのデビューアルバムの初日売上として、過去最大であるとともに、初週売上としても過去最高となっている。
+            </p>
+
+            <h2>1st ミニアルバム</h2>
+            <button onclick="toggleTable('firstAlbumTable')">表示/非表示</button>
+            <table id="firstAlbumTable">
+                <tr>
+                    <th>タイトル</th>
+                    <th>発売日</th>
+                    <th>売上枚数</th>
+                    <th>収録曲</th>
+                </tr>
+                <tr>
+                    <td>YOUTH IN THE SHADE</td>
+                    <td>2023年7月10日</td>
+                    <td>182万2028枚</td>
+                    <td>
+                        <ol>
+                            <li>Back to ZEROBASE</li>
+                            <li>In Bloom</li>
+                            <li>New Kidz on the Block</li>
+                            <li>And I</li>
+                            <li>Our Season</li>
+                            <li>Always</li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/trzeUClQIIg?si=iruC_kI9H5ptO71z&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <h2>2nd ミニアルバム</h2>
+            <button onclick="toggleTable('secondAlbumTable')">表示/非表示</button>
+            <table id="secondAlbumTable">
+                <tr>
+                    <th>タイトル</th>
+                    <th>発売日</th>
+                    <th>売上枚数</th>
+                    <th>収録曲</th>
+                </tr>
+                <tr>
+                    <td>MELTING POINT</td>
+                    <td>2023年11月6日</td>
+                    <td>213万1352枚</td>
+                    <td>
+                        <ol>
+                            <li>MELTING POINT</li>
+                            <li>Take My Hand</li>
+                            <li>CRUSH</li>
+                            <li>Kidz Zone</li>
+                            <li>Good Night</li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/AZoZbtI67Yk?si=wX2cJdH-bXmOR3eP&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <h2>3rd ミニアルバム</h2>
+            <button onclick="toggleTable('thirdAlbumTable')">表示/非表示</button>
+            <table id="thirdAlbumTable">
+                <tr>
+                    <th>タイトル</th>
+                    <th>発売日</th>
+                    <th>売上枚数</th>
+                    <th>収録曲</th>
+                </tr>
+                <tr>
+                    <td>You had me at HELLO</td>
+                    <td>2024年5月13日</td>
+                    <td>142万0773枚</td>
+                    <td>
+                        <ol>
+                            <li>Solar POWER</li>
+                            <li>Feel the POP</li>
+                            <li>Dear ECLIPSE</li>
+                            <li>SWEAT</li>
+                            <li>Sunday RIDE</li>
+                            <li>HELLO</li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/L9Ts6kiEAts?si=UOPv46aLuZ-Y3hKt&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
